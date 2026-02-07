@@ -1,0 +1,22 @@
+.wrapper {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: var(--text-muted);
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.6;
+}
+
+.message {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.sub {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+}

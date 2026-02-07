@@ -1,0 +1,39 @@
+.wrapper {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius);
+  color: var(--danger);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(239, 68, 68, 0.2);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.message {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.retry {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--danger);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 500;
+}
+
+.retry:hover {
+  filter: brightness(1.1);
+}
