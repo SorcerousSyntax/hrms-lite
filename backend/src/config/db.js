@@ -1,13 +1,18 @@
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/hrms-lite';
+export const connectDB = async () => {
+  console.log('DEBUG MONGO_URI:', process.env.MONGO_URI);
 
-export async function connectDB() {
-  try {
-    await mongoose.connect(MONGODB_URI);
-    console.log('MongoDB connected');
-  } catch (err) {
-    console.error('MongoDB connection error:', err.message);
+  if (!process.env.MONGO_URI) {
+    console.error('❌ MONGO_URI is not defined');
     process.exit(1);
   }
-}
+
+  try {
+    await mongoose.connect(process.env.MONGO_URI);
+    console.log('✅ MongoDB connected');
+  } catch (error) {
+    console.error('❌ MongoDB connection error:', error.message);
+    process.exit(1);
+  }
+};
